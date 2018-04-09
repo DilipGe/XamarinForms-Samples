@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinForms_Samples.ContactsList">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged" SearchButtonPressed="SearchBar_SearchButtonPressed" />
+            <ListView x:Name="Contacts" IsPullToRefreshEnabled="True" Refreshing="Contacts_Refreshing">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" Detail="{Binding Status}">
+                            <TextCell.ContextActions>
+                                <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}"/>
+                                <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}"/>
+                            </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
