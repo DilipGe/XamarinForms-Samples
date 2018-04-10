@@ -71,5 +71,14 @@ namespace XamarinForms_Samples
             //var value = (sender as SearchBar);
             //Contacts.ItemsSource = GetContacts(value.Text);
         }
+
+        private async void Contacts_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+                return;
+            var contact = e.SelectedItem as Contact;
+            await Navigation.PushAsync(new ContactDetails(contact));
+            Contacts.SelectedItem = null;
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace XamarinForms_Samples
 			InitializeComponent();
 
             //MainPage = new XamarinForms_Samples.MainPage();
-            MainPage = new XamarinForms_Samples.ContactsList();
+            MainPage = new NavigationPage(new XamarinForms_Samples.ContactsList());
         }
 
 		protected override void OnStart ()

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinForms_Samples.ContactsList">
+             x:Class="XamarinForms_Samples.ContactsList" Title="Contacts">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0"/>
     </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout Padding="10">
             <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged" SearchButtonPressed="SearchBar_SearchButtonPressed" />
-            <ListView x:Name="Contacts" IsPullToRefreshEnabled="True" Refreshing="Contacts_Refreshing">
+            <ListView x:Name="Contacts" IsPullToRefreshEnabled="True" Refreshing="Contacts_Refreshing" ItemSelected="Contacts_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding Name}" Detail="{Binding Status}">
