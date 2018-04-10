@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinForms_Samples.TableViewSample" Padding="20,0">
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Basics">
+                <TextCell Text="Name" Detail="Dilip"/>
+                <EntryCell Label="Title" Placeholder="(eg Shopping)"/>
+                <SwitchCell Text="Notifications" On="True"/>
+                <ViewCell> 
+                    <StackLayout>
+                        <Label Text="Starts" VerticalOptions="Center"/>
+                        <DatePicker Date="1 Jan 2018"  VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
