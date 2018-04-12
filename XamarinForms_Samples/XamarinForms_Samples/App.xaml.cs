@@ -18,7 +18,8 @@ namespace XamarinForms_Samples
             //MainPage = new XamarinForms_Samples.MainPage();
             //MainPage = new NavigationPage(new XamarinForms_Samples.ContactsList());
             //MainPage = new XamarinForms_Samples.TableViewSample();
-            MainPage = new XamarinForms_Samples.DataStorage.ApplicationProperties();
+            //MainPage = new XamarinForms_Samples.DataStorage.ApplicationProperties();
+            MainPage = new XamarinForms_Samples.WithSQLite();
         }
 
         public string Title
